@@ -119,7 +119,8 @@ def audit(url):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('url', help='Full URL to inspect')
+    parser.add_argument('url', nargs='?', default='https://aipctool.com',
+                        help='Full URL to inspect (default: https://aipctool.com)')
     parser.add_argument('--json', action='store_true', help='Print JSON')
     args = parser.parse_args()
     try:
