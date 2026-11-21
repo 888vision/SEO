@@ -2,9 +2,14 @@
 
 使用 Python 3.10+，无需安装第三方依赖。
 
+默认检查网站：https://aipctool.com。直接运行脚本即可检查，也可以传入其他网址。
+
 ```bash
+python seo_check.py
+python seo_check.py https://aipctool.com
+python seo_check.py --json > report.json
+# 检查其他网站
 python seo_check.py https://example.com
-python seo_check.py https://example.com --json > report.json
 ```
 
 检查 HTTP 状态、HTTPS、标题、描述、H1、图片 alt、canonical、HTML 语言、移动端 viewport、noindex 指令，以及站点根目录的 robots.txt 和 sitemap.xml。支持 HTTP 重定向、15 秒超时与单次响应 5 MB 上限。
